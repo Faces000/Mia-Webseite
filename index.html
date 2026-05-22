@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zwischen Erinnerung und Gefühl</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: white;
+    }
+
+    .seite {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      padding: 40px;
+      box-sizing: border-box;
+    }
+
+    .bild {
+      width: 30%;
+      max-width: 350px;
+    }
+
+    .bild img {
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.25);
+    }
+
+    .text {
+      width: 35%;
+      text-align: center;
+    }
+
+    .text h1 {
+      font-size: 42px;
+      margin-bottom: 20px;
+    }
+
+    .text p {
+      font-size: 20px;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 800px) {
+      .seite {
+        flex-direction: column;
+      }
+
+      .bild,
+      .text {
+        width: 90%;
+      }
+
+      .text h1 {
+        font-size: 32px;
+      }
+
+      .text p {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="seite">
+
+    <div class="bild">
+      <img src="https://i.ibb.co/ZR71LC0D/A.png" alt="Bild links">
+    </div>
+
+    <div class="text">
+      <h1>Zwischen Erinnerung und Gefühl</h1>
+
+      <p>
+        Manche Bilder zeigen nicht nur einen Moment.
+        Sie tragen etwas in sich, das man nicht sofort erklären kann:
+        Nähe, Sehnsucht, Stille und ein Gefühl, das bleibt.
+      </p>
+
+      <p>
+        Diese Seite ist ein kleiner Raum für genau dieses Gefühl.
+        Links und rechts stehen Bilder,
+        aber in der Mitte liegt das, was man nicht einfach sehen kann:
+        Bedeutung.
+      </p>
+
+      <p>
+        Vielleicht ist es nur eine einfache Webseite.
+        Aber manchmal reicht ein Bild, ein Satz, ein stiller Moment,
+        damit etwas im Inneren wieder lebendig wird.
+      </p>
+    </div>
+
+    <div class="bild">
+      <img src="https://i.ibb.co/8DwQzwGL/file-000000000e1871f7998a84e24146cf44.png" alt="Bild rechts">
+    </div>
+
+  </div>
+
+</body>
+</html>
