@@ -9,54 +9,123 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #111;
+      background: linear-gradient(to bottom, #111, #1a1a1a);
       color: white;
     }
 
     .seite {
       min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 40px;
-      padding: 40px;
+      padding: 25px 40px;
       box-sizing: border-box;
-    }
-
-    .bild {
-      width: 30%;
-      max-width: 350px;
-    }
-
-    .bild img {
-      width: 100%;
-      border-radius: 20px;
-      box-shadow: 0 0 25px rgba(255, 255, 255, 0.25);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
     .text {
-      width: 35%;
       text-align: center;
+      max-width: 760px;
+      margin: 0 auto 25px auto;
+      z-index: 2;
     }
 
     .text h1 {
-      font-size: 42px;
-      margin-bottom: 20px;
+      font-size: 40px;
+      margin-bottom: 12px;
     }
 
     .text p {
-      font-size: 20px;
-      line-height: 1.6;
+      font-size: 19px;
+      line-height: 1.5;
+      color: #dddddd;
+      margin: 0;
     }
 
-    @media (max-width: 800px) {
+    .bilder {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      gap: 35px;
+      width: 100%;
+    }
+
+    .frau {
+      width: 31%;
+      max-width: 410px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+    }
+
+    .frau img {
+      width: 100%;
+      max-height: 82vh;
+      object-fit: contain;
+      border-radius: 22px;
+      box-shadow: 0 0 30px rgba(255, 255, 255, 0.22);
+    }
+
+    .mittelspalte {
+      width: 24%;
+      max-width: 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    .spruch {
+      font-family: "Brush Script MT", "Segoe Script", "Comic Sans MS", cursive;
+      color: #d12b2b;
+      font-size: 28px;
+      line-height: 1.25;
+      text-align: center;
+      margin-bottom: 22px;
+      transform: rotate(-4deg);
+      text-shadow: 0 0 8px rgba(209, 43, 43, 0.45);
+    }
+
+    .mitte {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+    }
+
+    .mitte img {
+      width: 100%;
+      max-height: 45vh;
+      object-fit: contain;
+      border-radius: 22px;
+      box-shadow: 0 0 30px rgba(255, 255, 255, 0.22);
+    }
+
+    @media (max-width: 900px) {
       .seite {
-        flex-direction: column;
+        padding: 25px;
       }
 
-      .bild,
-      .text {
+      .bilder {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+      }
+
+      .frau,
+      .mittelspalte {
         width: 90%;
+        max-width: 420px;
+      }
+
+      .frau img,
+      .mitte img {
+        max-height: none;
+        width: 100%;
+      }
+
+      .spruch {
+        font-size: 26px;
+        margin: 15px 0 25px 0;
       }
 
       .text h1 {
@@ -74,35 +143,37 @@
 
   <div class="seite">
 
-    <div class="bild">
-      <img src="https://i.ibb.co/ZR71LC0D/A.png" alt="Bild links">
-    </div>
-
     <div class="text">
       <h1>Zwischen Erinnerung und Gefühl</h1>
-
       <p>
         Manche Bilder zeigen nicht nur einen Moment.
-        Sie tragen etwas in sich, das man nicht sofort erklären kann:
-        Nähe, Sehnsucht, Stille und ein Gefühl, das bleibt.
-      </p>
-
-      <p>
-        Diese Seite ist ein kleiner Raum für genau dieses Gefühl.
-        Links und rechts stehen Bilder,
-        aber in der Mitte liegt das, was man nicht einfach sehen kann:
-        Bedeutung.
-      </p>
-
-      <p>
-        Vielleicht ist es nur eine einfache Webseite.
-        Aber manchmal reicht ein Bild, ein Satz, ein stiller Moment,
-        damit etwas im Inneren wieder lebendig wird.
+        Sie tragen Nähe, Sehnsucht und eine stille Bedeutung in sich.
       </p>
     </div>
 
-    <div class="bild">
-      <img src="https://i.ibb.co/8DwQzwGL/file-000000000e1871f7998a84e24146cf44.png" alt="Bild rechts">
+    <div class="bilder">
+
+      <div class="frau">
+        <img src="https://i.ibb.co/ZR71LC0D/A.png" alt="Bild links">
+      </div>
+
+      <div class="mittelspalte">
+
+        <div class="spruch">
+          Lieber mit voller Wucht gegen die Wand fahren,<br>
+          als langsam und bitter vor sich hin zu vegetieren.
+        </div>
+
+        <div class="mitte">
+          <img src="https://i.ibb.co/FbJcskqF/file-000000002ec071f4af8ed0877e1a8bc7.png" alt="Bild in der Mitte">
+        </div>
+
+      </div>
+
+      <div class="frau">
+        <img src="https://i.ibb.co/8DwQzwGL/file-000000000e1871f7998a84e24146cf44.png" alt="Bild rechts">
+      </div>
+
     </div>
 
   </div>
